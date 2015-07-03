@@ -19,7 +19,7 @@ for your entire project, and send any number of requests.
 
 
 
-Special thanks to my mentor and great boss: Ziran Ding@[Wecash][4]! This solution will not exist or even work without his help.
+Special thanks to my mentor and great boss: [dingziran][4]@[Wecash][5]! This solution will not exist or even work without his help.
 
 
 
@@ -47,6 +47,10 @@ Advantage/Features:
     npm install node-microservice
 
 ## Usage
+
+
+
+npm users please refer to GitHub repo for better formatted Readme.
 
 ###Server:
 Just add this one line of code at the end of your service file, pass options as an object, and you have a working server.
@@ -156,11 +160,29 @@ You can find one test client and one test server file in the example folder. The
 
 
 
+## Message Broker
+
+We recommend and use RabbitMQ for its popularity and wide range of support. For a simple intro to installation and tutorial, please refer
+to its [website][6]. Essentially, since we use `amqplib`, any message broker based on amqp protocol is just fine.
+
+
+
+
+## Version Updates
+
+- Ver 0.5.6: fixed the problem of not parsing the response from server to JSON in package before passing back to client;
+no parsing is needed at all now!
+- Ver 0.5.5: fixed problems in server side on error handling including returning messages and shutting down when connection throws an error;
+updated license from ISC to MIT; minor fixes in readme; no longer prefer global installation
+
+
+
 
 ## TODO
 
 
 Definite:
+- Improve Readme with photos/interactions and version logs
 - Implement the logger system that would include all log info in one place
 - Include a simple RabbitMQ tutorial in README
 
@@ -168,13 +190,17 @@ Maybe:
 - Implement the topic/fanout delivery options
 - Implement the exchange/clustering node options
 
-Any help/fork/issues/contribution is deeply appreciated!
+Any help/fork/issues/contribution is deeply appreciated and welcomed!
 
 
-2015.7
+
+
+July 2015
 
 
 [1]: http://senecajs.org/
 [2]: https://developer.ibm.com/messaging/2015/05/06/microservices-with-seneca-and-mq-light/
 [3]: https://github.com/squaremo/amqp.node/tree/master/examples/tutorials
-[4]: http://www.wecash.net/
+[4]: https://github.com/dingziran
+[5]: http://www.wecash.net/
+[6]: https://www.rabbitmq.com/download.html
